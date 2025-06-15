@@ -5,4 +5,5 @@ scipy==1.9.3
 matplotlib==3.6.3
 seaborn==0.12.2
 streamlit==1.25.0
-ydata-profiling==4.1.2
+ydata-profiling>=4.2.0
+
