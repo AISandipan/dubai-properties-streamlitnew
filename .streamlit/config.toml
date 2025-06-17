@@ -1,5 +1,9 @@
 # .streamlit/config.toml
 
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [server]
 headless = true
 port = 8501

@@ -5,5 +5,15 @@ scipy==1.10.1
 matplotlib==3.6.3
 seaborn==0.12.2
 streamlit==1.25.0
-ydata-profiling>=4.2.0
+plotly==5.15.0  # Required for EDA visualizations
 
+# Removed profiling packages:
+# - ydata-profiling
+# - pandas-profiling
+# - htmlmin
+# - cgi (obsolete in Python 3.13)
+
+# Required for building some packages
+setuptools
+wheel
+xlsxwriter==3.1.2  # For Excel report generation

@@ -1,11 +1,7 @@
-
 # app.py
-# redeploy trigger
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from ydata_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics.pairwise import cosine_similarity
 from io import BytesIO
@@ -44,12 +40,18 @@ if view == "📄 View & Filter Data":
 
     st.dataframe(filtered)
 
-# EDA Report
+# EDA Report (Updated)
 elif view == "📊 EDA Profiling":
-    st.title("📊 Exploratory Data Analysis Report")
+    st.title("📊 Basic EDA Summary")
 
-    profile = ProfileReport(df, title="Dubai Properties EDA Report", explorative=True)
-    st_profile_report(profile)
+    st.subheader("📌 Dataset Overview")
+    st.write(df.head())
+
+    st.subheader("📊 Data Types")
+    st.write(df.dtypes)
+
+    st.subheader("📈 Summary Statistics")
+    st.write(df.describe())
 
     st.subheader("📈 Price Distribution")
     fig1 = px.histogram(df, x="price", nbins=50, title="Price Distribution")

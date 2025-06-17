@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\user\Desktop\AI_Python_Github\Dubai_Properties_App\venv"
+VIRTUAL_ENV="C:\Users\user\Desktop\AI_Python_Github\Dubai_Properties_App\Dubai_Properties_App\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
